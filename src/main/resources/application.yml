@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/secondked_db
+    username: user
+    password: 12345678
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans, loggers, info, metrics, mappings, env, caches
